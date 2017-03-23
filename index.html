@@ -34,6 +34,9 @@
             <li>
                 <a href="/sitemap.html">Site Map</a>
             </li>
+            <li style="float:left">
+                <a href="/00006017.docx">Report</a>
+            </li>
         </ul>
     </nav>
     <div class="page" id="home">
@@ -250,6 +253,11 @@
                                 </button>
                             </th>
                         </tr>
+                        <tr>
+                            <th colspan="2">
+                                <span class="text-danger" id="form-message"> </span>
+                            </th>
+                        </tr>
                     </tfoot>
                 </table>
             </form>
@@ -266,17 +274,29 @@
         /*This is validation code for form*/
         function validateForm() {
             var result = true;
-            var name = document.forms["contact-form"]["name"].value;
+            var message = [];
+            var name = document.forms["contact-form"]["name"];
             //Check name to be not empty
-            if (name == "") {
+            if (name.value == "") {
+                message.push("Name cannot be empty!");
+                name.style.border = "1px solid red";
                 result = false;
             }
             
-            var email = document.forms["contact-form"]["email"].value;
+            var email = document.forms["contact-form"]["email"];
             //Email regexp pattern (letters, digits, dots)@(letters, digits,dots).(letters, digits)
             var regexpPattern = /^[a-zA-Z0-9.]+@[a-zA-Z0-9.]+\.[a-zA-Z0-9]+$/;
-            result = regexpPattern.test(email);
+            if(!regexpPattern.test(email.value)){
+                message.push("Wrong email!");
+                name.style.border = "1px solid red";
+                result = false;
+            }
             var message = document.forms["contact-form"]["text"].value;
+            if(!result){
+                document.getElementById("form-message").innerHTML = message.join("<br>");
+            }else{
+                document.getElementById("form-message").innerHTML = " ";
+            }
             return result;
         }
         var slideControl = createSlideShow("slideshow");
