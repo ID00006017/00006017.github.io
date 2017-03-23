@@ -1,0 +1,27 @@
+/* Grid css system for max 3 columns*/
+
+div[class*="col-"] {
+    float: left;
+    margin: 0;
+    padding: 3px;
+    box-sizing: border-box;
+}
+/* for devices less than 600px*/
+@media (max-width: 600px) {
+    .col-md-1, .col-md-2, .col-md-3 {
+        width: 100%;
+    }
+}
+/* for devices more than 600px*/
+@media (min-width: 600px) {
+    .col-md-1 {
+        width: 33.33%;
+    }
+    .col-md-2 {
+        width: 66.66%;
+    }
+    .col-md-3 {
+        clear: both;
+        width: 100%;
+    }
+}

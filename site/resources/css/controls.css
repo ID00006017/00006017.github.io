@@ -1,0 +1,364 @@
+/* Base */
+
+body {
+    margin: 0px;
+    margin-top: -25px;
+    overflow-x: hidden;
+    background: black;
+}
+.pointer{
+    cursor: pointer;
+}
+.content {
+    padding-top: 25px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+}
+
+.page {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 45px;
+    overflow-x: hidden;
+}
+.page.full{
+    height: 100%;
+}
+
+.bordered {
+    border-bottom: 1px solid black;
+}
+
+
+/* Links */
+
+a {
+    position: relative;
+    text-decoration: none;
+}
+
+a:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 1px;
+    transform: scaleX(0);
+    transition: 0.3s all ease-in-out;
+    border-bottom: 1px solid black;
+}
+
+a:hover:before {
+    content: "";
+    transform: scaleX(0.8);
+}
+
+
+/* buttons*/
+
+.btn-full {
+    width: 100%;
+}
+
+[class*="btn-"] {
+    position: relative;
+    border: 1px solid white;
+    background: none;
+    cursor: pointer;
+    padding: 7px;
+    border-radius: 7px;
+}
+
+[class*="btn-"]:after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    height: 100%;
+    width: 100%;
+    transform: scaleX(0);
+    transition: .5s all ease-in-out;
+    text-align: center;
+    border-radius: 7px;
+}
+
+[class*="btn-"]:hover:after {
+    transform: scaleX(1);
+}
+
+.btn-warning:after {
+/*    border: 1px solid orange;*/
+    box-shadow: inset 0 0 3px 0.5px orange;
+}
+
+.btn-primary:after {
+/*    border: 1px solid cornflowerblue;*/
+    box-shadow: inset 0 0 3px 0.5px cornflowerblue;
+}
+
+.btn-success:after {
+/*    border: 1px solid green;*/
+    box-shadow: inset 0 0 3px 0.5px green;
+}
+
+.btn-danger:after {
+/*    border: 1px solid red;*/
+    box-shadow: inset 0 0 3px 0.5px red;
+}
+
+.btn-default:after {
+/*    border: 1px solid white;*/
+    box-shadow: inset 0 0 3px 0.5px white;
+}
+
+
+/* Borders */
+
+
+/* Text */
+
+.text-primary {
+    color: cornflowerblue;
+}
+
+.text-success {
+    color: green;
+}
+
+.text-danger {
+    color: red;
+}
+
+.text-default {
+    color: white;
+}
+
+.text-warning {
+    color: orange;
+}
+
+.text-between {
+    position: relative;
+    text-align: center;
+}
+
+.text-between:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    margin-top: -1px;
+    height: 1px;
+    width: 25%;
+    background: white;
+}
+
+.text-between:after {
+    content: "";
+    position: absolute;
+    left: 75%;
+    top: 50%;
+    margin-top: -1px;
+    height: 1px;
+    width: 25%;
+    background: white;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+/* Navigation */
+
+nav {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background: black;
+    height: 45px;
+    margin: 0px;
+    padding: 0px;
+    z-index: 9999;
+    padding-left: 7px;
+}
+
+nav > .navbar {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul.navbar,
+ol.navbar {
+    list-style-type: none;
+}
+
+nav > .navbar > li {
+    display: table;
+    float: left;
+    width: 100px;
+    height: 100%;
+}
+
+nav>.navbar > li {
+    float: left;
+}
+
+nav > .navbar > li > a {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    border-left: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    color: whitesmoke;
+}
+
+nav > .navbar > li.brand {
+    float: left;
+}
+
+nav > .navbar > li.brand > a {
+    color: whitesmoke;
+    display: table-cell;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav > .navbar > li > a:before {
+    border-color: white;
+    bottom: 7px;
+}
+
+
+/* Contact Us*/
+
+.contact-container {
+    display: table;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.contact-form {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.contact-table {
+    margin: 0 auto;
+    background: rgba(255, 255, 255, .5);
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.contact-table th {
+    text-align: right;
+}
+
+.contact-table>thead,
+.contact-table>tbody,
+.contact-table>tfoot {}
+
+
+/* Input styling */
+
+input:active,
+input:focus {
+    box-shadow: inset 0 0 1px .5px cornflowerblue;
+    border: 1px solid cornflowerblue;
+    border-radius: 7px;
+}
+
+input {
+    padding: 7px;
+    border-radius: 7px;
+    border: 1px solid cornflowerblue;
+}
+
+
+/*Rotator*/
+
+.rotator {
+    position: relative;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.rotator>[class*="rotate-"] {
+    width: 100%;
+    transition: 1s all ease-in-out;
+}
+
+.rotator>.rotate-1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.rotator>.rotate-1>.content{
+    color: white;
+    text-align: center;
+    margin: 10%;
+}
+.rotator>.rotate-1 {
+    transform: scaleX(0);
+}
+
+.rotator:hover>.rotate-1 {
+    transform: scaleX(1);
+    background: rgba(0,0,0, 0.8);
+    background-size: cover;
+/*    border: 1px solid white;*/
+    box-shadow: inset 0 0 11px .5px white;
+}
+.rotator>.rotate-1>.link {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+}
+
+
+/* SlideShow control */
+
+.slideshow-control {
+    position: absolute;
+    display: table;
+    padding: 25px;
+}
+.slideshow-control.right{
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    height: 100%;
+}
+.slideshow-control.left{
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: 100%;
+}
+.slideshow-control.bottom{
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+}

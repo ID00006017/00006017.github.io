@@ -1,0 +1,154 @@
+/* Base */
+.content {
+	padding-top: 25px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+}
+/* Links */
+
+a {
+    position: relative;
+    text-decoration: none;
+}
+a:before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 1px;
+    transform: scaleX(0);
+    transition: 0.3s all ease-in-out;
+    border-bottom: 1px solid black;
+}
+a:hover:before{
+    content: "";
+    transform: scaleX(1);
+}
+
+/* buttons*/
+
+[class*="btn-"] {
+    position:relative;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+[class*="btn-"]:after {
+    content:"";
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    height: 100%;
+    width: 100%;
+    transform: scaleX(0);
+    transition: .5s all ease-in-out;
+}
+[class*="btn-"]:hover:after {
+     transform: scaleX(1);
+}
+$danger : red;
+$warning : orange;
+$success : green;
+$primary : cornflowerblue;
+$default : white;
+
+.btn-warning:after{
+    border: 1px solid $warning;
+    box-shadow: inset 0 0 1px .5px $warning;
+}
+.btn-primary:after{
+    border: 1px solid $primary;
+    box-shadow: inset 0 0 1px .5px $primary;
+}
+.btn-success:after{
+    border: 1px solid $success;
+    box-shadow: inset 0 0 1px .5px $success;
+}
+.btn-danger:after{
+    border: 1px solid $danger;
+    box-shadow: inset 0 0 1px .5px $danger;
+}
+.btn-default:after{
+    border: 1px solid $default;
+    box-shadow: inset 0 0 1px .5px $default;
+}
+
+/* Borders */
+
+
+
+/* Text */
+
+.text-primary{
+    color: $primary;
+}
+.text-success{
+    color: $success;
+}
+.text-danger{
+    color: $danger;
+}
+.text-default{
+    color: $default;
+}
+.text-warning{
+    color: $warning;
+}
+
+.text-between{
+	position: relative;
+	text-align:center;
+}
+
+.text-between:before{
+	content: "";
+	position: absolute;
+	left: 0px;
+	top: 50%;
+	margin-top: -1px;
+	height: 1px;
+	width: 25%;
+	background: white;
+}
+.text-between:after{
+	content: "";
+	position: absolute;
+	left: 75%;
+	top: 50%;
+	margin-top: -1px;
+	height: 1px;
+	width: 25%;
+	background: white;
+}
+
+/* Navigation */
+nav {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+    z-index: 9999;
+}
+
+nav > .navbar {
+	width: 100%;
+}
+ul.navbar, ol.navbar {
+    list-style-type: none;
+}
+nav > .navbar > li {
+    display: inline;
+	float: left;
+    width: 100px;
+}
+nav > .navbar > li > a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+    
+    

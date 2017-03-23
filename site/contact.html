@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>00006017:AdAge</title>
+    <link href="resources/css/grid.css" rel="stylesheet">
+    <link href="resources/css/controls.css" rel="stylesheet">
+    <link href="resources/css/cards.css" rel="stylesheet">
+    <script src="resources/js/canvas.initer.js"></script>
+    <script src="resources/js/particleSystem.js"></script>
+    <script src="resources/js/texter.js"></script>
+    <script src="resources/js/jquery.js"></script>
+    <script src="resources/js/libs/purl.js"></script>
+    <script src="resources/js/slide.js"></script>
+    <script src="resources/css/slideshow.js"></script>
+    <script src="resources/js/contact.js"></script>
+    <script src="resources/js/texterHeader.js"></script>
+</head>
+
+<body style="display:table; height: 100vh; width: 100vw; background: url('resources/imgs/contactback.jpg'); background-size: cover">
+   <div class="page" style="display: table">
+    <div style="display:table-cell; vertical-align: middle; text-align: center; border: 1px solid white; background: rgba(255,255,255,0.5)">
+        <div class="col-md-1">
+            <h1 id="name"></h1>
+            <h1 id="message"></h1>
+        </div>
+        <div class="col-md-1">
+            <button class="btn-full btn-success" onclick="window.history.back()">
+                Go Back
+            </button>
+        </div>
+    </div>
+   </div>
+    <script>
+        var name = purl().param("name");
+        var email = purl().param("email");
+        jQuery("#name").text("Thank you for reply!");
+        jQuery("#message").text("Hello, " + name + ",we will contact with you by " + email + " as soon as possible!");
+//        createTexterHeader("message", "Hello, " + name + ",", "15px Arial");
+//        createTexterHeader("message", "we will contact with you by " + email , "15px Arial");
+//        createTexterHeader("message1", " as soon as possible!", "15px Arial");
+    </script>
+</body>
+</html>

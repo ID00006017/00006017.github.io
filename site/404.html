@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>00006017:AdAge</title>
+    <link href="resources/css/grid.css" rel="stylesheet">
+    <link href="resources/css/controls.css" rel="stylesheet">
+    <link href="resources/css/cards.css" rel="stylesheet">
+    <script src="resources/js/jquery.js"></script>
+    <script src="resources/js/libs/purl.js"></script>
+    <script src="resources/js/canvas.initer.js"></script>
+    <script src="resources/js/particleSystem.js"></script>
+    <script src="resources/js/texter.js"></script>
+    <script src="resources/js/texterHeader.js"></script>
+    <style>
+        body {
+            position: fixed;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            top: 0px;
+            background-size: cover;
+        }
+        
+        .animated {
+            transition: 1s all ease-in-out;
+        }
+        
+        .big {
+            transform: scale(2);
+        }
+        
+        .normal {
+            transform: scale(1);
+        }
+        
+        .small {
+            transform: scale(0.3);
+        }
+        
+        .hidden {
+            opacity: 0;
+        }
+        
+        .visible {
+            opacity: 1;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="navbar">
+            <li class="brand">
+                <a href="/index.html"><i class="fa fa-home"></i> Home</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="page full" style="display: table; background-image: url('resources/imgs/404devart.jpg'); background-size: cover; padding: 75px; " id="portfolio">
+    <h1 style="vertical-align: middle;" class="text-between text-default border-default">Sorry!<br>Broken link or page!</h1>
+    </div>
+    <script>
+        jQuery(document).ready(function(){
+            jQuery(".animated").removeClass("big");
+            jQuery(".animated").addClass("small");
+            setTimeout(function(){
+                jQuery(".animated").removeClass("small");
+                jQuery(".animated").addClass("normal");
+            }, 300);
+        })
+    </script>
+</body>
+
+</html>

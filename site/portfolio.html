@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>00006017:AdAge</title>
+    <link href="resources/css/grid.css" rel="stylesheet">
+    <link href="resources/css/controls.css" rel="stylesheet">
+    <link href="resources/css/cards.css" rel="stylesheet">
+    <script src="resources/js/jquery.js"></script>
+    <script src="resources/js/libs/purl.js"></script>
+    <style>
+        body {
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            top: 0px;
+            background: url(resources/imgs/contactback.jpg);
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="navbar">
+            <li class="brand">
+                <a href="/index.html"><i class="fa fa-home"></i> Home</a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+        var nowPage = parseInt(purl().param("page"));
+        for(var i = 1 ; i < 4 ; i++){
+            if(i != nowPage){
+                jQuery(".navbar").append("<li><a href='/portfolio.html?page="+i+"'>"+i+"</a></li>")
+            }else{
+                jQuery(".navbar").append("<li><a href='#' style='pointer-events: none; cursor: default; color: cornflowerblue;'>"+i+"</span></li>")
+            }
+        }
+    </script>
+    <div id="portfolio">
+        <h1 class="text-between text-default border-default">Portfolio</h1>
+        <div class="col-md-1">
+            <div class="col-md-3">
+                <div class="rotator">
+                    <img src="resources/imgs/contactback.jpg" class="rotate-0">
+                    <div class="rotate-1">
+                        <div class="content">
+                            <h3>Lorem ipsum</h3> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                        <a href="#" class=" link"></a>
+                    </div>
+                </div>
+                <div class="rotator">
+                    <img src="resources/imgs/contactback.jpg" class="rotate-0">
+                    <div class="rotate-1">
+                        <div class="content">
+                            <h3>Lorem ipsum</h3> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                        <a href="#" class=" link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="rotator">
+                    <img src="resources/imgs/contactback.jpg" class="rotate-0">
+                    <div class="rotate-1">
+                        <div class="content">
+                            <h3>Lorem ipsum</h3> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                        <a href="#" class=" link"></a>
+                    </div>
+                </div>
+                <div class="rotator">
+                    <img src="resources/imgs/slide0.jpg" class="rotate-0">
+                    <div class="rotate-1">
+                        <div class="content">
+                            <h3>Lorem ipsum</h3> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                        <a href="#" class=" link"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="col-md-3">
+                <div class="rotator">
+                    <img src="resources/imgs/slide2.jpg" class="rotate-0">
+                    <div class="rotate-1">
+                        <div class="content">
+                            <h3>Lorem ipsum</h3> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                        <a href="#" class=" link"></a>
+                    </div>
+                </div>
+                <div class="rotator">
+                    <img src="resources/imgs/slide2.jpg" class="rotate-0">
+                    <div class="rotate-1">
+                        <div class="content">
+                            <h3>Lorem ipsum</h3> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                        <a href="#" class=" link"></a>
+                    </div>
+                </div>
+                <div class="rotator">
+                    <img src="resources/imgs/slide2.jpg" class="rotate-0">
+                    <div class="rotate-1">
+                        <div class="content">
+                            <h3>Lorem ipsum</h3> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                        <a href="#" class=" link"></a>
+                    </div>
+                </div>
+                <div class="rotator">
+                    <img src="resources/imgs/slide1.jpg" class="rotate-0">
+                    <div class="rotate-1">
+                        <div class="content">
+                            <h3>Lorem ipsum</h3> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                        <a href="#" class=" link"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="col-md-3">
+                <div class="rotator">
+                    <img src="resources/imgs/slide0.jpg" class="rotate-0">
+                    <div class="rotate-1">
+                        <div class="content">
+                            <h3>Lorem ipsum</h3> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                        <a href="#" class=" link"></a>
+                    </div>
+                </div>
+                <div class="rotator">
+                    <img src="resources/imgs/contactback.jpg" class="rotate-0">
+                    <div class="rotate-1">
+                        <div class="content">
+                            <h3>Lorem ipsum</h3> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                        <a href="#" class=" link"></a>
+                    </div>
+                </div>
+                <div class="rotator">
+                    <img src="resources/imgs/contactback.jpg" class="rotate-0">
+                    <div class="rotate-1">
+                        <div class="content">
+                            <h3>Lorem ipsum</h3> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                        <a href="#" class=" link"></a>
+                    </div>
+                </div>
+                <div class="rotator">
+                    <img src="resources/imgs/slide1.jpg" class="rotate-0">
+                    <div class="rotate-1">
+                        <div class="content">
+                            <h3>Lorem ipsum</h3> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                        <a href="#" class=" link"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
